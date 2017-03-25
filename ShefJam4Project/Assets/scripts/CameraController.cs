@@ -1,16 +1,26 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class C : MonoBehaviour {
+public class CameraController : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-		
+	private Camera m_Camera;                        // Used for referencing the camera.
+	private Vector3 startPosition;
+	public float leftLimit;
+	public float rightLimit;
+
+	void Start(){
+		startPosition = transform.position;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+	private void Awake ()
+	{
+		m_Camera = GetComponentInChildren<Camera> ();
 	}
+
+
+	void Update ()
+	{
+		transform.position = new Vector3(Mathf.Clamp(transform.position.x, leftLimit, rightLimit), transform.position.y, transform.position.z);
+
+	}
+		
 }
