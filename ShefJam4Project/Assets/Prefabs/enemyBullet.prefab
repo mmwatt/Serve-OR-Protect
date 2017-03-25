@@ -9,48 +9,48 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1202249510298404}
+  m_RootGameObject: {fileID: 1608902178628324}
   m_IsPrefabParent: 1
---- !u!1 &1202249510298404
+--- !u!1 &1608902178628324
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4767452996694912}
-  - component: {fileID: 212392205617216896}
-  - component: {fileID: 114399789892589528}
-  - component: {fileID: 61274332325080884}
-  - component: {fileID: 50345286532596704}
-  m_Layer: 0
-  m_Name: enemy
-  m_TagString: Untagged
+  - component: {fileID: 4756473800324302}
+  - component: {fileID: 212868593659849868}
+  - component: {fileID: 50286652391611650}
+  - component: {fileID: 61306288870973482}
+  - component: {fileID: 114618828741735496}
+  m_Layer: 8
+  m_Name: enemyBullet
+  m_TagString: enemyProjectiles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4767452996694912
+--- !u!4 &4756473800324302
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1202249510298404}
+  m_GameObject: {fileID: 1608902178628324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.35, y: 0.07, z: 1}
+  m_LocalPosition: {x: -4.35, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50345286532596704
+--- !u!50 &50286652391611650
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1202249510298404}
-  m_BodyType: 0
+  m_GameObject: {fileID: 1608902178628324}
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -61,47 +61,41 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
---- !u!61 &61274332325080884
+--- !u!61 &61306288870973482
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1202249510298404}
+  m_GameObject: {fileID: 1608902178628324}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.03, y: 0.03}
   serializedVersion: 2
-  m_Size: {x: 1.88, y: 1.88}
---- !u!114 &114399789892589528
+  m_Size: {x: 0.187, y: 0.187}
+--- !u!114 &114618828741735496
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1202249510298404}
+  m_GameObject: {fileID: 1608902178628324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f63c2b7994658e143bb578ee4c59398b, type: 3}
+  m_Script: {fileID: 11500000, guid: b5b0d97ef90f26649820696d16ae55fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1608902178628324, guid: f2c55cc93566af04f94864150f1eac72, type: 2}
-  movementSpeed: 1
-  xMin: -10
-  xMax: 10
-  yMin: -10
-  yMax: 10
-  maxHealth: 40
-  currHealth: 0
---- !u!212 &212392205617216896
+  damage: 10
+  speed: 10
+--- !u!212 &212868593659849868
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1202249510298404}
+  m_GameObject: {fileID: 1608902178628324}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -127,7 +121,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 52a85586bc71cd64480e00aa7d7d006d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: dcce2b87359afac4080f05795650d1a4, type: 3}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
