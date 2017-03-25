@@ -29,12 +29,17 @@ public class playerController : MonoBehaviour {
 
         Vector2 newPos = new Vector2(changeHorizontal, changeVertical);
         rbody2D.velocity = newPos * movementSpeed;
-		anim.SetFloat ("vx", rbody2D.velocity.x);
-		anim.SetFloat ("vy", rbody2D.velocity.y);
+
         rbody2D.position = new Vector2(Mathf.Clamp(rbody2D.position.x, xMin, xMax), Mathf.Clamp(rbody2D.position.y, yMin, yMax));
     }
 
     void Update () {
+		if (health <= 0) {
+			anim.SetTrigger ("gameOver");
+
+		}
+		anim.SetFloat ("vx", rbody2D.velocity.x);
+		anim.SetFloat ("vy", rbody2D.velocity.y);
         mainCamera.transform.position = new Vector3(transform.position.x, transform.position.y, 0);
         if (Input.GetAxisRaw("Fire1") != 0f) {
             if (!isFiring) {
