@@ -13,7 +13,7 @@ public class playerController : MonoBehaviour {
 
     public void Awake () {
         rbody2D = GetComponent<Rigidbody2D>();
-        mainCamera = (GameObject)GameObject.FindWithTag("Main Camera");
+        mainCamera = (GameObject)GameObject.FindWithTag("MainCamera");
     }
 
     void FixedUpdate () {
