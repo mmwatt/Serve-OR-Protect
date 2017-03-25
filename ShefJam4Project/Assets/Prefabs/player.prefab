@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a7dcda067747db46b79a3b767fe4f8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
+  bullet: {fileID: 1673764422053536, guid: 3f8bb1851c924e0478c4392747bdaf8a, type: 2}
   movementSpeed: 1
   xMin: -10
   xMax: 10

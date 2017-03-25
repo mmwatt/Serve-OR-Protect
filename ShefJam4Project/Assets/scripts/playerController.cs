@@ -28,9 +28,12 @@ public class playerController : MonoBehaviour {
 
     void Update () {
         mainCamera.transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+        if (Input.GetButtonDown("Fire1")) {
+            shootBullet();
+        }
     }
 
     public void shootBullet () {
-        Instantiate(bullet);
+        Instantiate(bullet,transform.position,Quaternion.identity);
     }
 }
