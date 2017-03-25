@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class playerController : MonoBehaviour {
+	Animator anim;
     public GameObject bullet;
 	public int maxHealth;
 	public int health;
@@ -14,6 +15,7 @@ public class playerController : MonoBehaviour {
     private GameObject mainCamera;
 
     public void Awake () {
+		anim = GetComponent<Animator> ();
         rbody2D = GetComponent<Rigidbody2D>();
         mainCamera = (GameObject)GameObject.FindWithTag("MainCamera");
 		health = maxHealth;
@@ -25,7 +27,8 @@ public class playerController : MonoBehaviour {
 
         Vector2 newPos = new Vector2(changeHorizontal, changeVertical);
         rbody2D.velocity = newPos * movementSpeed;
-
+		anim.SetFloat ("vx", rbody2D.velocity.x);
+		anim.SetFloat ("vy", rbody2D.velocity.y);
         rbody2D.position = new Vector2(Mathf.Clamp(rbody2D.position.x, xMin, xMax), Mathf.Clamp(rbody2D.position.y, yMin, yMax));
     }
 

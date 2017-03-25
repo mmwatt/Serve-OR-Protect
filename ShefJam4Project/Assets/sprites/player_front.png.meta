@@ -1,11 +1,13 @@
 fileFormatVersion: 2
-guid: 8fae3dfc501040c4a9501c3f7675cd9e
-timeCreated: 1490468324
+guid: 694e1ca8c0134fa40bea64c7657fa740
+timeCreated: 1490467127
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: playerSide_0
-    21300002: playerSide_1
+    21300000: Agent 413 -- Front_0
+    21300002: Agent 413 -- Front_1
+    21300004: Agent 413 -- Front_2
+    21300006: Agent 413 -- Front_3
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -29,7 +31,7 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapMode: 1
@@ -80,28 +82,54 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: playerSide_0
+      name: Agent 413 -- Front_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 9
-        width: 10
+        x: 0
+        y: 0
+        width: 20
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerSide_1
+      name: Agent 413 -- Front_1
       rect:
         serializedVersion: 2
         x: 20
-        y: 9
-        width: 10
+        y: 0
+        width: 20
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Agent 413 -- Front_2
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 0
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Agent 413 -- Front_3
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
