@@ -35,20 +35,19 @@ public class playerController : MonoBehaviour {
     }
 
     void Update () {
+        shootBullet();
+    }
+
+    private void shootBullet () {
         mainCamera.transform.position = new Vector3(transform.position.x, transform.position.y, 0);
         if (Input.GetAxisRaw("Fire1") != 0f) {
             if (!isFiring) {
-                shootBullet();
+                Instantiate(bullet, transform.position, Quaternion.identity);
                 isFiring = true;
             }
         }
-
         if (Input.GetAxisRaw("Fire1") == 0f) {
             isFiring = false;
         }
-    }
-
-    public void shootBullet () {
-        Instantiate(bullet,transform.position,Quaternion.identity);
     }
 }

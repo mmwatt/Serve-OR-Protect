@@ -29,18 +29,23 @@ public class EnemyController : MonoBehaviour {
 
 	}
 
-	public void Shoot(){
-	}
-
 	public void shootBullet () {
 		Instantiate(bullet);
 	}
 
-    private void OnCollisionEnter2D (Collision2D collision) {
-        if (collision.gameObject.tag == "playerProjectiles") {
-            playerProjectileBehaviour playerProjectile = collision.gameObject.GetComponent<playerProjectileBehaviour>();
+    private void killed () {
+        Debug.Log("Enemy Killed.");
+        Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D (Collider2D col) {
+        if (col.gameObject.tag == "playerProjectiles") {
+            playerProjectileBehaviour playerProjectile = col.gameObject.GetComponent<playerProjectileBehaviour>();
             currHealth -= playerProjectile.damage;
-            Debug.Log("Enemy health: " + currHealth);
+            playerProjectile.hit();
+        }
+        if(currHealth <= 0) {
+            killed();
         }
 
     }
