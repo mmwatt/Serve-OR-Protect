@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class playerProjectileBehaviour : MonoBehaviour {
-    public float damage = 10;
+    public int damage = 10;
     public float speed = 15;
 
     private Rigidbody2D rbody2D;
     private Camera mainCamera;
     private SpriteRenderer spriteRenderer;
+
     public void hit () {
-        Destroy(this);
+        Destroy(gameObject);
     }
 
     void Awake () {
@@ -30,7 +31,7 @@ public class playerProjectileBehaviour : MonoBehaviour {
     private void Update () {
         Vector3 pos = mainCamera.WorldToViewportPoint(transform.position);
         if (checkPointOnScreen(pos) == false) {
-            Destroy(gameObject);
+            hit();
         }
     }
 
