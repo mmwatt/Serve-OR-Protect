@@ -39,7 +39,9 @@ public class playerController : MonoBehaviour {
 
     private void shootBullet () {
         mainCamera.transform.position = new Vector3(transform.position.x, transform.position.y, 0);
-        if (Input.GetAxisRaw("Fire1") != 0f) {
+        float horizontal = Mathf.Round(Input.GetAxisRaw("AimHorizontal"));
+        float vertical = Mathf.Round(Input.GetAxisRaw("AimVertical"));
+        if (Input.GetAxisRaw("Fire1") != 0f && (horizontal != 0 || vertical != 0)) {
             if (!isFiring) {
                 Instantiate(bullet, transform.position, Quaternion.identity);
                 isFiring = true;

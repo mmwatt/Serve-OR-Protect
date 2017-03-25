@@ -3,34 +3,51 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
-	public GameObject bullet;
-	private GameObject player;
-	public float movementSpeed;
-	public float xMin, xMax, yMin, yMax;
-	private Rigidbody2D rbody2D;
+    public GameObject bullet;
+    private GameObject player;
+    public float movementSpeed;
+    public float xMin, xMax, yMin, yMax;
+    private Rigidbody2D rbody2D;
 
     public int maxHealth = 40;
     public int currHealth;
-	public void Start(){
-		rbody2D = GetComponent<Rigidbody2D>();
+
+
+    private float fireRate = 3f; //lower is harder
+
+    public void Start () {
+        rbody2D = GetComponent<Rigidbody2D>();
         currHealth = maxHealth;
-	}
+        randomWaitShoot();
+    }
 
-	void FixedUpdate ()
-	{
-		
-	}
+    void FixedUpdate () {
 
-	void Update () {
-		Transform target = GameObject.FindWithTag("Player").transform;
-		Vector3 direction = (transform.position - target.position);
-		float step = movementSpeed * Time.deltaTime;
-		transform.position = Vector3.MoveTowards (transform.position, target.position, step);
+    }
 
-	}
+    void Update () {
+        Transform target = GameObject.FindWithTag("Player").transform;
+        Vector3 direction = (transform.position - target.position);
+        float step = movementSpeed * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
-	public void shootBullet () {
-		Instantiate(bullet);
+
+    }
+
+    private void randomWaitShoot () {
+        IEnumerator coroutine = WaitThenShoot(fireRate);
+        StartCoroutine(coroutine);
+    }
+
+    private IEnumerator WaitThenShoot (float waitTime) {
+        while (true) {
+            yield return new WaitForSeconds(Random.Range(0f, waitTime));
+            spawnBullet();
+        }
+    }
+
+	private void spawnBullet () {
+		Instantiate(bullet, transform.position, Quaternion.identity);
 	}
 
     private void killed () {
@@ -47,6 +64,5 @@ public class EnemyController : MonoBehaviour {
         if(currHealth <= 0) {
             killed();
         }
-
     }
 }
