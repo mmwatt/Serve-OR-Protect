@@ -18,6 +18,8 @@ ExportedObj/
 *.booproj
 *.svd
 
+# Aseprite raw files
+*.ase
 
 # Unity3D generated meta files
 *.pidb.meta
