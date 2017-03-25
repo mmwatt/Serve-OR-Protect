@@ -14,6 +14,8 @@ public class playerController : MonoBehaviour {
     private Rigidbody2D rbody2D;
     private GameObject mainCamera;
 
+    private bool isFiring = false;
+
     public void Awake () {
 		anim = GetComponent<Animator> ();
         rbody2D = GetComponent<Rigidbody2D>();
@@ -34,8 +36,15 @@ public class playerController : MonoBehaviour {
 
     void Update () {
         mainCamera.transform.position = new Vector3(transform.position.x, transform.position.y, 0);
-        if (Input.GetButtonDown("Fire1")) {
-            shootBullet();
+        if (Input.GetAxisRaw("Fire1") != 0f) {
+            if (!isFiring) {
+                shootBullet();
+                isFiring = true;
+            }
+        }
+
+        if (Input.GetAxisRaw("Fire1") == 0f) {
+            isFiring = false;
         }
     }
 
