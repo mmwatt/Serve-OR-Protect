@@ -9,9 +9,11 @@ public class EnemyController : MonoBehaviour {
 	public float xMin, xMax, yMin, yMax;
 	private Rigidbody2D rbody2D;
 
+    public int maxHealth = 40;
+    public int currHealth;
 	public void Start(){
 		rbody2D = GetComponent<Rigidbody2D>();
-
+        currHealth = maxHealth;
 	}
 
 	void FixedUpdate ()
@@ -27,10 +29,24 @@ public class EnemyController : MonoBehaviour {
 
 	}
 
-	public void Shoot(){
-	}
-
 	public void shootBullet () {
 		Instantiate(bullet);
 	}
+
+    private void killed () {
+        Debug.Log("Enemy Killed.");
+        Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D (Collider2D col) {
+        if (col.gameObject.tag == "playerProjectiles") {
+            playerProjectileBehaviour playerProjectile = col.gameObject.GetComponent<playerProjectileBehaviour>();
+            currHealth -= playerProjectile.damage;
+            playerProjectile.hit();
+        }
+        if(currHealth <= 0) {
+            killed();
+        }
+
+    }
 }
