@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class playerController : MonoBehaviour {
     public GameObject bullet;
+	public int maxHealth;
+	public int health;
     
     public float movementSpeed;
     public float xMin, xMax, yMin, yMax;
@@ -14,6 +16,7 @@ public class playerController : MonoBehaviour {
     public void Awake () {
         rbody2D = GetComponent<Rigidbody2D>();
         mainCamera = (GameObject)GameObject.FindWithTag("MainCamera");
+		health = maxHealth;
     }
 
     void FixedUpdate () {
