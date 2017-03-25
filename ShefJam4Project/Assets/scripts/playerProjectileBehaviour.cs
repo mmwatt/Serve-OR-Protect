@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class projectileBehaviour : MonoBehaviour {
+public class playerProjectileBehaviour : MonoBehaviour {
     public float damage = 10;
     public float speed = 15;
 
@@ -16,7 +16,6 @@ public class projectileBehaviour : MonoBehaviour {
     void Awake () {
         rbody2D = GetComponent<Rigidbody2D>();
         mainCamera = (Camera) GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Start () {
