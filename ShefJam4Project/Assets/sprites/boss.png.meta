@@ -1,16 +1,15 @@
 fileFormatVersion: 2
-guid: 5d3a12901c4926946a461621b12ccd53
-timeCreated: 1490481694
+guid: 2b954149c152e42499ec12fde7a71d74
+timeCreated: 1490514184
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: health_0
-    21300002: health_1
-    21300004: health_2
-    21300006: health_3
-    21300008: health_4
-    21300010: health_5
-    21300012: health_6
+    21300000: boss_0
+    21300002: boss_1
+    21300004: boss_2
+    21300006: boss_3
+    21300008: boss_4
+    21300010: boss_5
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -85,93 +84,80 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: health_0
+      name: boss_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 55
-        width: 7
-        height: 6
+        x: 6
+        y: 2
+        width: 8
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: health_1
+      name: boss_1
       rect:
         serializedVersion: 2
-        x: 12
-        y: 55
-        width: 7
-        height: 6
+        x: 17
+        y: 2
+        width: 12
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: health_2
+      name: boss_2
       rect:
         serializedVersion: 2
-        x: 21
-        y: 56
-        width: 4
-        height: 5
+        x: 32
+        y: 2
+        width: 8
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: health_3
+      name: boss_3
       rect:
         serializedVersion: 2
-        x: 8
-        y: 49
-        width: 22
-        height: 4
+        x: 45
+        y: 2
+        width: 15
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: health_4
+      name: boss_4
       rect:
         serializedVersion: 2
-        x: 9
-        y: 45
-        width: 20
-        height: 2
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: health_5
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 28
-        width: 27
-        height: 6
+        x: 63
+        y: 2
+        width: 12
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: health_6
+      name: boss_5
       rect:
         serializedVersion: 2
-        x: 3
-        y: 37
-        width: 28
-        height: 6
+        x: 78
+        y: 2
+        width: 15
+        height: 37
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
