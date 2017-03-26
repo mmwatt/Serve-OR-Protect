@@ -21,8 +21,8 @@ public class CutsceneController : MonoBehaviour {
         choiceBad = o_choiceBad.GetComponent<Button>();
         choiceGood = o_choiceGood.GetComponent<Button>();
         mainText = o_mainText.GetComponent<Text>();
-        player = o_player.GetComponent<Image>();
-        otherChar = o_otherChar.GetComponent<Image>();
+        //player = o_player.GetComponent<Image>();
+        //otherChar = o_otherChar.GetComponent<Image>();
 
         o_player.SetActive(false);
         o_otherChar.SetActive(false);
@@ -31,11 +31,11 @@ public class CutsceneController : MonoBehaviour {
     private void displayText (string text, bool mainCharSpeaking) {
         mainText.text = text;
         if (mainCharSpeaking) {
-            player.enabled = true;
-            otherChar.enabled = false;
+            //player.enabled = true;
+            //otherChar.enabled = false;
         } else {
-            player.enabled = false;
-            otherChar.enabled = true;
+            //player.enabled = false;
+            //otherChar.enabled = true;
         }
     }
 
