@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CutsceneController : MonoBehaviour {
     public GameObject o_choiceBad;
@@ -49,6 +50,24 @@ public class CutsceneController : MonoBehaviour {
             case 0: //text changes etc. go here
                 break;
         }
+    }
+    public void setChoice1 () {
+        playerChoice pChoice = GameObject.FindGameObjectWithTag("playerChoice").GetComponent<playerChoice>();
+        pChoice.choices[0] = true;
+        LoadNextLevel();
+    }
+    public void setChoice2 () {
+        playerChoice pChoice = GameObject.FindGameObjectWithTag("playerChoice").GetComponent<playerChoice>();
+        pChoice.choices[1] = true;
+        LoadNextLevel();
+    }
+    public void setChoice3 () {
+        playerChoice pChoice = GameObject.FindGameObjectWithTag("playerChoice").GetComponent<playerChoice>();
+        pChoice.choices[2] = true;
+        LoadNextLevel();
+    }
+    public void LoadNextLevel () {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 }

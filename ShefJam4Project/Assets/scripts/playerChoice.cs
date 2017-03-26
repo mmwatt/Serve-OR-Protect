@@ -8,5 +8,6 @@ public class playerChoice : MonoBehaviour {
     //Prevents object from being destroyed when a new scene is loaded.
 	private void Awake () {
         DontDestroyOnLoad(gameObject);
+        for (int i = 0; i < choices.Length; i++) choices[i] = false;
     }
 }
