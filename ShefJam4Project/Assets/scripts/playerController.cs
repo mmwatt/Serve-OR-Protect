@@ -51,4 +51,12 @@ public class playerController : MonoBehaviour {
             isFiring = false;
         }
     }
+
+    private void OnTriggerEnter2D (Collider2D col) {
+        if (col.gameObject.tag == "enemyProjectiles") {
+            enemyProjectileBehaviour enemyProjectile = col.gameObject.GetComponent<enemyProjectileBehaviour>();
+            health -= enemyProjectile.damage;
+            enemyProjectile.hit();
+        }
+    }
 }

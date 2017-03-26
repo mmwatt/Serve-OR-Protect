@@ -7,7 +7,7 @@ TagManager:
   - playerProjectiles
   - enemyProjectiles
   - HUD
-  - healthBar
+  - playerChoice
   layers:
   - Default
   - TransparentFX
