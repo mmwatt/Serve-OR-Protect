@@ -52,6 +52,7 @@ public class EnemyController : MonoBehaviour {
 
     private void killed () {
         Debug.Log("Enemy Killed.");
+        EnemyManager.instance.enemiesAlive -= 1;
         Destroy(gameObject);
     }
 
