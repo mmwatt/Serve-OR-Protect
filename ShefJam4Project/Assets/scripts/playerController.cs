@@ -20,7 +20,6 @@ public class playerController : MonoBehaviour {
 		anim = GetComponent<Animator> ();
         rbody2D = GetComponent<Rigidbody2D>();
         mainCamera = (GameObject)GameObject.FindWithTag("MainCamera");
-		health = maxHealth;
     }
 
     void FixedUpdate () {
