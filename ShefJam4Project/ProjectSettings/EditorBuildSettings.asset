@@ -6,6 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_Scenes/Cutscene1.unity
+  - enabled: 1
     path: Assets/_Scenes/MainGame.unity
   - enabled: 1
-    path: Assets/_Scenes/Cutscene1.unity
+    path: Assets/_Scenes/Cutscene2.unity
+  - enabled: 1
+    path: Assets/_Scenes/MainGame2.unity
+  - enabled: 1
+    path: Assets/_Scenes/Cutscene3.unity
+  - enabled: 1
+    path: Assets/_Scenes/MainGame3.unity
+  - enabled: 1
+    path: Assets/_Scenes/Cutscene4.unity
+  - enabled: 1
+    path: Assets/_Scenes/win.unity
+  - enabled: 1
+    path: Assets/_Scenes/promo.unity
